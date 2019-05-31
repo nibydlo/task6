@@ -1,0 +1,46 @@
+.main {
+  width: 100%;
+  padding-right: 0;
+  box-sizing: border-box;
+  display: block;
+  min-width: max-content;
+  position: relative;
+  margin-top: 10px;
+}
+
+.main__left_column {
+  display: inline-block;
+  width: 147px;
+  margin: 0;
+  vertical-align: top;
+}
+
+.left_column__btn_write {
+  height: 32px;
+  width: 147px;
+  background-color: #6287bd;
+  color: white;
+  border: 0;
+  border-radius: 3px;
+}
+
+.left_column__btn_group {
+  width: 147px;
+}
+
+.btn_group__control_button {
+  margin-top: 5px;
+  width: 147px;
+  min-height: 22px;
+  background-color: transparent;
+  border: 0;
+  text-align: left;
+  padding-left: 10px;
+  display: block;
+}
+
+.btn_group__control_button:hover{
+  background-color: #cdd6e4;
+  border-radius: 3px;
+  font-weight: bold;
+}

@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import Header from './components/Header';
-import './app.css';
-import MainComponent from './components/MainComponent';
+import Header from './components/header/Header';
+import styles from './app.module.css';
+import MainComponent from './components/mainComponent/MainComponent';
 import json from '../letter.json';
 import { isNull } from 'util';
+import './components/main.css';
+
+
 
 type MyState = {
   k: number,
@@ -99,7 +102,7 @@ export class App extends Component<{}, MyState> {
   sender = () => {
     this.addMessage();
 
-    setTimeout(this.sender.bind(this), 3000);
+    setTimeout(this.sender.bind(this), 15000);
   };
 
   markAsAnimated = () => {
@@ -219,7 +222,7 @@ export class App extends Component<{}, MyState> {
 
     let passedMessages:any[] = this.state.messages.filter((mes:any) => mes.text.includes(this.state.filter)).filter(this.filterByDate);
     return (
-      <body className="mail_body">
+      <body className={styles.mail_body}>
       <Header
         filterMessages = {this.filterMessages}
         deleteFilter={this.deleteFilter}

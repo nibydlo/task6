@@ -1,0 +1,6 @@
+.message_block__message_list {
+  visibility: visible;
+  position: relative;
+  max-height: 1230px;
+  overflow: hidden;
+}

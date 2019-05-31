@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import MessageItem from './MessageItem';
+import MessageItem from '../messageItem/MessageItem';
 //import { AutoSizer, List} from 'react-virtualized';
+import '../main.css';
+
+
 
 type MessageListProps = {
   messageListClass: string,

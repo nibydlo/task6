@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import '../main.css';
 
 type MessageItemProps = {
   id: any,

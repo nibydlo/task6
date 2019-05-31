@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import './main.css'
-import PropTypes from 'prop-types';
-import MessageBlock from './MessageBlock';
+import styles from './mainComponent.module.css';
+import MessageBlock from '../messageBlock/MessageBlock';
 
 type MainComponentProps = {
   text: string,
@@ -21,18 +20,18 @@ type MainComponentProps = {
 class MainComponent extends Component<MainComponentProps,{}> {
   render() {
     return (
-      <div className={'main'}>
-        <div className="main__left-column">
+      <div className={styles.main}>
+        <div className={styles.main__left_column}>
           <form>
-            <button className="left-column__btn_write">Написать</button>
+            <button className={styles.left_column__btn_write}>Написать</button>
           </form>
-          <div className="left-column__btn-group">
-            <button className={'btn-group__control-button'}>Входящие</button>
-            <button className={'btn-group__control-button'}>Отправленные</button>
-            <button className={'btn-group__control-button'}>Удалённые</button>
-            <button className={'btn-group__control-button'}>Спам</button>
-            <button className={'btn-group__control-button'}>Черновики</button>
-            <button className={'btn-group__control-button'}>Создать папку</button>
+          <div className={styles.left_column__btn_group}>
+            <button className={styles.btn_group__control_button}>Входящие</button>
+            <button className={styles.btn_group__control_button}>Отправленные</button>
+            <button className={styles.btn_group__control_button}>Удалённые</button>
+            <button className={styles.btn_group__control_button}>Спам</button>
+            <button className={styles.btn_group__control_button}>Черновики</button>
+            <button className={styles.btn_group__control_button}>Создать папку</button>
           </div>
         </div>
         <MessageBlock

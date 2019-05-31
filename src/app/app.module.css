@@ -18,18 +18,18 @@
 }
 
 .mail_body {
-  background-color: #e5eaf0;
   padding-top: 12px;
-  padding-left: 22px;
   padding-right: 0;
+  padding-left: 22px;
+  background-color: #e5eaf0;
   font-family: YandexRegular, sans-serif;
 }
 
 body {
-  background-color: #e5eaf0;
   padding-top: 12px;
-  padding-left: 22px;
   padding-right: 0;
+  padding-left: 22px;
+  background-color: #e5eaf0;
   font-family: YandexRegular, sans-serif;
 }
 

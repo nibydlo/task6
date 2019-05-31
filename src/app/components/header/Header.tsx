@@ -1,10 +1,6 @@
 import * as React from 'react';
-import './header.css';
-import yandexLogo from './yandex_mail.png';
-const DateRangePicker = require('@wojtekmaj/react-daterange-picker');
-
-import PropTypes, { any } from 'prop-types';
-import MainComponent from './MainComponent';
+import styles from './header.module.css';
+import yandexLogo from '../yandex_mail.png';
 
 type HeaderProps = {
   filterMessages: (req:any) => void,
@@ -66,30 +62,30 @@ class Header extends React.Component<HeaderProps, HeaderState> {
   render() {
 
     const res = (
-      <div className={'header'}>
-     /*   <div className={'header__three_dashes'}>
-          <div className={'dash dash__first-dash'}></div>
-          <div className={'dash dash__second-dash'}></div>
-          <div className={'dash dash__third-dash'}></div>
+      <div className={styles.header}>
+           <div className={styles.header__three_dashes}>
+          <div className={[styles.dash, styles.dash__first].join(' ')}></div>
+          <div className={[styles.dash, styles.dash__second].join(' ')}></div>
+          <div className={[styles.dash, styles.dash__third].join(' ')}></div>
         </div>
-        <img src={yandexLogo} className={'header__logo'}/>
-        <label className="header__search">
+        <img src={yandexLogo} className={styles.header__logo}/>
+        <label className={styles.header__search}>
           <input
-            className="search__input-text"
+            className={styles.search__input_text}
             type="text"
             value={this.state.value}
             onChange={this.handleChange}
             onKeyDown={this.handleKey}
           />
-          <input className="search__input-button" type="button"></input>
-          <span className="search__cross" onClick={this.localDeleteFilter.bind(this)}> X </span>
+          <input className={styles.search__input_button} type="button"></input>
+          <span className={styles.search__cross} onClick={this.localDeleteFilter.bind(this)}> X </span>
         </label>
-        <div className="header__dates">
+        {/*<div className="header__dates">
           <DateRangePicker onChange={this.onChange} value={this.state.dateRange}/>
+        </div>*/}
+        <div className={styles.header__letters_count}>{this.props.filtered ? 'Найдено писем: ' + this.props.lettersCount : ''}
         </div>
-        <div className="header__letters-count">{this.props.filtered ? 'Найдено писем: ' + this.props.lettersCount : ''}
-        </div>
-*/
+
       </div>
     );
     console.log(res);
