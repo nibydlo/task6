@@ -39,7 +39,7 @@ export class App extends Component<{}, MyState> {
     textM: '',
     textClass: 'message-block__message-text_visible',
     messageListClass: 'message-block__message-list',
-    mainChecked: true,
+    mainChecked: false,
     smthToChange: false,
     messageOrText: true,
     filter: '',
@@ -170,14 +170,15 @@ export class App extends Component<{}, MyState> {
 
   };
 
-
+  setMainChecked = () => {
+    this.setState(prevState => {return {
+      mainChecked: !prevState.mainChecked
+    }});
+  };
 
   setCheckBoxes = () => {
     let i = 0;
-    const oldMainChecked = this.state.mainChecked;
-    this.setState({
-      mainChecked: !oldMainChecked
-    });
+    this.setMainChecked();
     const l = this.state.messages.filter((mes:any) => mes.text.includes(this.state.filter)).filter(this.filterByDate).length;
     for (
       i = l - 1;
@@ -185,7 +186,7 @@ export class App extends Component<{}, MyState> {
       i--) {
         let filtered:any  = this.state.messages.filter((mes:any) => mes.text.includes(this.state.filter)).filter(this.filterByDate)[i];
         if (filtered !== null) {
-          filtered.checked = this.state.mainChecked;
+          filtered.checked = !this.state.mainChecked;
         }
     }
   };

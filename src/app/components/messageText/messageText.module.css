@@ -4,3 +4,12 @@
   visibility: visible;
   height: auto;
 }
+
+.message_text__hide_button {
+  height: 32px;
+  width: 100px;
+  background-color: #6287bd;
+  color: white;
+  border: 0;
+  border-radius: 3px;
+}

@@ -61,7 +61,7 @@
   outline: none;
 }
 .check__input:checked {
-  background: #e2e2e2;
+  background: #6b6868;
   background-clip: content-box;
 }
 

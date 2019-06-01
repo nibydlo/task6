@@ -12,7 +12,7 @@ class MessageText extends Component<MessageTextProps> {
   render() {
     return (
       <div className={styles.message_block__message_text_visible}>
-        <button className="message-text__hide_button" onClick={this.props.hideMessage}>
+        <button className={styles.message_text__hide_button} onClick={this.props.hideMessage}>
           Hide
         </button>
         <div>{this.props.text}</div>
