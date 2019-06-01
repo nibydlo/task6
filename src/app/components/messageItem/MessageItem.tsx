@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from './messageItem.module.css';
 import '../main.css';
 
 type MessageItemProps = {
@@ -19,7 +20,18 @@ class MessageItem extends Component<MessageItemProps> {
   render() {
 
     console.log("render message");
-
+    /*
+    const messageClassName =
+      this.props.deleted
+        ?
+        [styles.message_block__deleted, styles.message_block__row, styles.message_block__central_row, styles.message_block_central_row_unread].join(' ')
+        : (this.props.animBefore ?
+          (this.props.read ?
+            [styles.message_block__central_row_read, styles.message_block__row, styles.message_block__central_row].join(' ') :
+            [styles.message_block__central_row_unread, styles.message_block__row, styles.message_block__central_row].join(' ')) :
+          [styles.new_message__appear, styles.message_block__new_message, styles.message_block__central_row_unread, styles.message_block__row, styles.message_block__central_row].join(' ')
+        );
+*/
     const messageClassName =
       this.props.deleted
         ?

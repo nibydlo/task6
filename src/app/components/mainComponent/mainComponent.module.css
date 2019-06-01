@@ -39,7 +39,27 @@
   display: block;
 }
 
+.btn_group__control_button_dark {
+  margin-top: 5px;
+  width: 147px;
+  min-height: 22px;
+  background-color: transparent;
+  border: 0;
+  text-align: left;
+  padding-left: 10px;
+  display: block;
+  color: white;
+}
+
 .btn_group__control_button:hover{
+  color: black;
+  background-color: #cdd6e4;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.btn_group__control_button_dark:hover{
+  color: black;
   background-color: #cdd6e4;
   border-radius: 3px;
   font-weight: bold;

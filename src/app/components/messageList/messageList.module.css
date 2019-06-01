@@ -4,3 +4,12 @@
   max-height: 1230px;
   overflow: hidden;
 }
+
+
+.message_block__message_list_dark {
+  visibility: visible;
+  position: relative;
+  max-height: 1230px;
+  overflow: hidden;
+  background-color: #303030;
+}

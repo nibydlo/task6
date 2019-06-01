@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MessageItem from '../messageItem/MessageItem';
 //import { AutoSizer, List} from 'react-virtualized';
-import '../main.css';
+import styles from './messageList.module.css';
 
 
 
@@ -56,7 +56,7 @@ class MessageList extends React.Component<MessageListProps> {
     //console.log("render message-list");
 
     return (
-      <div className={this.props.messageListClass}>
+      <div className={styles.message_block__message_list}>
         {this.props.messages.slice(0).reverse().map(message => {
           return (
             <MessageItem

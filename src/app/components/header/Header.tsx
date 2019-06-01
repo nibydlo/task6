@@ -8,7 +8,8 @@ type HeaderProps = {
   setFilterByDate:  (s:any, f:any) => void,
   unsetFilterByDate: () => void,
   filtered: boolean,
-  lettersCount: number
+  lettersCount: number,
+  changeTheme: () => void
 }
 
 type HeaderState = {
@@ -85,7 +86,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
         </div>*/}
         <div className={styles.header__letters_count}>{this.props.filtered ? 'Найдено писем: ' + this.props.lettersCount : ''}
         </div>
-
+        <button onClick={this.props.changeTheme} className={styles.header__change_theme_btn}>Сменить тему</button>
       </div>
     );
     console.log(res);

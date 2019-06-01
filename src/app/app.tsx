@@ -22,7 +22,8 @@ type MyState = {
   filter: string,
   filterByDateActive: boolean,
   dateStart: Date,
-  dateFinish: Date
+  dateFinish: Date,
+  dark: boolean
 }
 
 function isDefined<T>(a: T | null | undefined): a is T {
@@ -44,7 +45,8 @@ export class App extends Component<{}, MyState> {
     filter: '',
     filterByDateActive: false,
     dateStart: new Date(),
-    dateFinish: new Date()
+    dateFinish: new Date(),
+    dark: true
   };
 
 
@@ -218,11 +220,15 @@ export class App extends Component<{}, MyState> {
     return (!this.state.filterByDateActive) || mes.date.getTime() >= this.state.dateStart && mes.date.getTime() <= this.state.dateFinish;
   };
 
+  changeTheme = () => {
+    this.setState(prevState => {return {dark : !prevState.dark}})
+  };
+
   render() {
 
     let passedMessages:any[] = this.state.messages.filter((mes:any) => mes.text.includes(this.state.filter)).filter(this.filterByDate);
     return (
-      <body className={styles.mail_body}>
+      <body className={this.state.dark ? styles.mail_body_dark : styles.mail_body}>
       <Header
         filterMessages = {this.filterMessages}
         deleteFilter={this.deleteFilter}
@@ -230,6 +236,7 @@ export class App extends Component<{}, MyState> {
         unsetFilterByDate={this.unsetFilterByDate}
         filtered={this.state.filter != "" || this.state.filterByDateActive}
         lettersCount={this.state.messages.filter((mes:any) => mes.text.includes(this.state.filter)).filter(this.filterByDate).length}
+        changeTheme={this.changeTheme}
       />
       <MainComponent
         messages={passedMessages}
@@ -244,6 +251,7 @@ export class App extends Component<{}, MyState> {
         mainChecked={this.state.mainChecked}
         messageOrText={this.state.messageOrText}
         triggerToChange={this.state.smthToChange}
+        dark={this.state.dark}
       />
       </body>
     );

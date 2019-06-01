@@ -100,7 +100,7 @@
   outline: none;
 }
 .check__input:checked {
-  background: #e2e2e2;
+  background: #6b6868;
   background-clip: content-box;
 }
 
@@ -228,7 +228,7 @@
   color: #9b9b9b;
   width: max-content;
 }
-
+/*
 .hidden-message {
   display: none;
 }
@@ -273,7 +273,7 @@
 .hidden-message__text {
   margin-top: 30px;
 }
-
+*/
 .message-block__lower-row {
   position: absolute;
   float: bottom;
@@ -295,7 +295,6 @@
   margin-right: 20px;
   min-width: max-content;
 }
-
 
 .message-block__deleted {
   transition-duration: 1s;

@@ -15,6 +15,24 @@
   padding-bottom: 31px;
 }
 
+.main__message_block_dark {
+  left: 150px;
+  right: 0;
+  position: absolute;
+  display: inline-block;
+  background-color: #303030;
+  margin-right: 20px;
+  margin-left: 20px;
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.34);
+  /*min-width: 800px;*/
+  min-height: 500px;
+  min-width: 1000px;
+  overflow: hidden;
+  height: auto;
+  padding-bottom: 31px;
+
+}
+
 .message_block__row {
   height: 40px;
   padding: 0;

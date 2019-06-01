@@ -25,6 +25,16 @@
   font-family: YandexRegular, sans-serif;
 }
 
+.mail_body_dark {
+  padding-top: 12px;
+  padding-right: 0;
+  padding-left: 22px;
+  background-color: #212121;
+  color: white;
+  font-family: YandexRegular, sans-serif;
+  height: 2500px;
+}
+
 body {
   padding-top: 12px;
   padding-right: 0;

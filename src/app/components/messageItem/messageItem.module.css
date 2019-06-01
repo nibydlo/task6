@@ -29,11 +29,11 @@
   display: block;
 }
 
-.message_block__central_row_unread .central_row__msg_sender {
+.message_block__central_row_unread.central_row__msg_sender {
   font-family: YandexBold;
 }
 
-.message_block__central_row_unread .central_row__point {
+.message_block__central_row_unread.central_row__point {
   vertical-align: top;
   margin-left: 20px;
   margin-top: 15px;
@@ -43,7 +43,6 @@
   background-color: #6287bd;
   border-radius: 50%;
 }
-
 
 .central_row__avatar_frame {
   vertical-align: top;
@@ -80,7 +79,7 @@
   min-width: 250px;
 }
 
-.message_block__central_row_read .central_row__point {
+.message_block__central_row_read.central_row__point {
   vertical-align: top;
   margin-left: 20px;
   margin-top: 15px;
@@ -98,11 +97,11 @@
   display: inline-block;
 }
 
-.message_block__central_row_unread .central_row__msg_theme {
+.message_block__central_row_unread.central_row__msg_theme {
   font-family: YandexBold;
 }
 
-.message_block__central_row_read .point {
+.message_block__central_row_read.point {
   visibility: hidden;
 }
 
@@ -168,6 +167,6 @@
   outline: none;
 }
 .check__input:checked {
-  background: #e2e2e2;
+  background: #424040;
   background-clip: content-box;
 }

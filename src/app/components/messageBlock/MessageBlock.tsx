@@ -16,7 +16,8 @@ type MessageBlockProps = {
   setCheckBoxes: () => void,
   mainChecked: any,
   messageOrText: any,
-  triggerToChange: any
+  triggerToChange: any,
+  dark: boolean
 }
 
 class MessageBlock extends Component<MessageBlockProps> {
@@ -36,7 +37,7 @@ class MessageBlock extends Component<MessageBlockProps> {
         hideMessage={this.props.hideMessage}
       />;
     return (
-      <div className={styles.main__message_block}>
+      <div className={this.props.dark ? styles.main__message_block_dark : styles.main__message_block}>
         <div className={[styles.message_block__row, styles.message_block__upper_row].join(' ')}>
           <label className={styles.check}>
             <input

@@ -14,7 +14,8 @@ type MainComponentProps = {
   setCheckBoxes: () => void,
   mainChecked: any,
   messageOrText: any,
-  triggerToChange: any
+  triggerToChange: any,
+  dark: boolean
 }
 
 class MainComponent extends Component<MainComponentProps,{}> {
@@ -26,12 +27,12 @@ class MainComponent extends Component<MainComponentProps,{}> {
             <button className={styles.left_column__btn_write}>Написать</button>
           </form>
           <div className={styles.left_column__btn_group}>
-            <button className={styles.btn_group__control_button}>Входящие</button>
-            <button className={styles.btn_group__control_button}>Отправленные</button>
-            <button className={styles.btn_group__control_button}>Удалённые</button>
-            <button className={styles.btn_group__control_button}>Спам</button>
-            <button className={styles.btn_group__control_button}>Черновики</button>
-            <button className={styles.btn_group__control_button}>Создать папку</button>
+            <button className={this.props.dark ? styles.btn_group__control_button_dark : styles.btn_group__control_button}>Входящие</button>
+            <button className={this.props.dark ? styles.btn_group__control_button_dark : styles.btn_group__control_button}>Отправленные</button>
+            <button className={this.props.dark ? styles.btn_group__control_button_dark : styles.btn_group__control_button}>Удалённые</button>
+            <button className={this.props.dark ? styles.btn_group__control_button_dark : styles.btn_group__control_button}>Спам</button>
+            <button className={this.props.dark ? styles.btn_group__control_button_dark : styles.btn_group__control_button}>Черновики</button>
+            <button className={this.props.dark ? styles.btn_group__control_button_dark : styles.btn_group__control_button}>Создать папку</button>
           </div>
         </div>
         <MessageBlock
@@ -47,6 +48,7 @@ class MainComponent extends Component<MainComponentProps,{}> {
           mainChecked={this.props.mainChecked}
           messageOrText={this.props.messageOrText}
           triggerToChange={this.props.triggerToChange}
+          dark={this.props.dark}
         />
       </div>
     );

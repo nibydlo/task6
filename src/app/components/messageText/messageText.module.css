@@ -1,0 +1,6 @@
+.message_block__message_text_visible {
+  display: block;
+  margin: 20px;
+  visibility: visible;
+  height: auto;
+}
