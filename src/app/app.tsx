@@ -84,7 +84,7 @@ export class App extends Component<{}, MyState> {
 
     this.setState(prevState => {
       const newMessages = prevState.messages;
-      newMessages.push({
+      newMessages.unshift({
         id: id1,
         author: author1,
         theme: theme1,
@@ -147,6 +147,7 @@ export class App extends Component<{}, MyState> {
     this.setState({
       smthToChange: !oldSmthToChange
     });
+    if (this.state.mainChecked) this.setMainChecked();
     setTimeout(this.deleteMessagesFromState, 1000)
   };
 

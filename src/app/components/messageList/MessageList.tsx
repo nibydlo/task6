@@ -57,7 +57,7 @@ class MessageList extends React.Component<MessageListProps> {
 
     return (
       <div className={styles.message_block__message_list}>
-        {this.props.messages.slice(0).reverse().map(message => {
+        {this.props.messages.map(message => {
           return (
             <MessageItem
               id={message.id}

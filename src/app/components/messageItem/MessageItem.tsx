@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PureComponent } from 'react';
 import styles from './messageItem.module.css';
 import '../main.css';
 
@@ -16,7 +16,7 @@ type MessageItemProps = {
   read: any
 }
 
-class MessageItem extends Component<MessageItemProps> {
+class MessageItem extends PureComponent<MessageItemProps> {
   render() {
 
     console.log("render message");

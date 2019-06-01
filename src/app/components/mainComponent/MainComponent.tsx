@@ -7,13 +7,13 @@ type MainComponentProps = {
   textClass: string,
   messageListClass: string,
   messages: any[],
-  changeSelected: (id: any) => void,
+  changeSelected: (id: number) => void,
   hideMessage: () => void,
-  showMessage: (id: any) => void,
+  showMessage: (id: number) => void,
   deleteMessages: () => void,
   setCheckBoxes: () => void,
-  mainChecked: any,
-  messageOrText: any,
+  mainChecked: boolean,
+  messageOrText: boolean,
   triggerToChange: any,
   dark: boolean
 }
